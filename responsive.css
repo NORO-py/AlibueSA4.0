@@ -1,0 +1,15 @@
+/* Móvil primero; ajustes para tablet/desktop */
+@media (min-width: 640px) {
+  .dashboard-grid { grid-template-columns: repeat(3, 1fr); }
+  .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+  .form-grid { grid-template-columns: repeat(3, 1fr); }
+  .sector-list { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 960px) {
+  .dashboard-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 360px) {
+  .form-grid, .kpi-grid, .role-grid, .sector-list, .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

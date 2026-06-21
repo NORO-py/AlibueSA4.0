@@ -1,0 +1,44 @@
+/* Formularios */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.form-grid.cols-1 { grid-template-columns: 1fr; }
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field.full { grid-column: 1 / -1; }
+.field label {
+  font-size: .72rem; color: var(--c-text-soft);
+  text-transform: uppercase; letter-spacing: .06em; font-weight: 600;
+}
+.field input, .field select, .field textarea {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: 1rem;
+  color: var(--c-text);
+  font-family: inherit;
+  width: 100%;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(31,58,46,.15);
+}
+.field input[type="number"] { font-variant-numeric: tabular-nums; }
+.help { font-size: .72rem; color: var(--c-text-muted); margin-top: 2px; }
+
+.divider { height: 1px; background: var(--c-border); margin: 14px 0; }
+
+.totals-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  background: var(--c-primary-50);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  margin-top: 8px;
+}
+.totals-strip div { text-align: center; }
+.totals-strip .lbl { font-size: .65rem; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: .06em; }
+.totals-strip .val { font-size: 1.15rem; font-weight: 700; color: var(--c-primary); font-variant-numeric: tabular-nums; }
